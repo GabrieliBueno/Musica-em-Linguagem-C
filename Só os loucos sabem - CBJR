@@ -1,0 +1,359 @@
+#include <16F628a.h>
+#use delay (clock = 4MHz)
+#fuses NOMCLR, INTRC_IO
+#define AF pin_b3
+#define BT0 pin_a0
+// notas
+#define G4 631
+#define A4 568
+#define B4 505
+#define C4 947
+#define D4 842
+#define E4 758
+#define C5 473
+#define D5 421
+// FUNÇÃO NOTA
+ N(INT16 n,int16 dur){
+ INT16 i;
+ FOR(i=0;i<dur;i++){
+ output_toggle(AF);
+ delay_us(n);
+ }
+ }
+ VOID main(void){
+ output_low(AF);
+ WHILE(1){
+ WHILE(input(BT0)==1);
+
+ //musica
+
+
+ N(B4,300);
+ delay_ms(20);
+ N(B4,250);
+ delay_ms(20);
+ N(B4,100);
+ delay_ms(30);
+ N(A4,350);
+ delay_ms(30);
+ N(C5,300);
+ delay_ms(20);
+ N(C5,300);
+ delay_ms(30);
+ N(B4,250);
+ delay_ms(30);
+ N(A4,100);
+ N(G4,150);
+ N(E4,400);
+ delay_ms(300);
+// introdução
+
+
+ N(A4,100);
+ delay_ms(5);
+ N(A4,150);
+ delay_ms(5);
+ N(G4,100);
+ delay_ms(10);
+ N(G4,250);
+ delay_ms(50);
+
+ //agora eu sei
+
+ N(G4,80);
+ N(A4,150);
+ N(B4,200);
+ N(A4,80);
+ N(B4,80);
+ N(A4,80);
+ N(B4,150);
+ N(A4,200);
+ delay_ms(50);
+
+ ///exatamente o que fazer
+
+ N(A4,200);
+ delay_ms(5);
+ N(G4,100);
+ delay_ms(15);
+ N(G4,190);
+ delay_ms(5);
+ N(E4,100);
+ delay_ms(5);
+ N(G4,250);
+ delay_ms(50);
+
+
+ ////bom recomeçar
+
+ N(G4,200);
+ delay_ms(5);
+ N(G4,150);
+ delay_ms(5);
+ N(G4,100);
+ delay_ms(5);
+ N(A4,200);
+ delay_ms(5);
+ N(B4,100);
+ delay_ms(5);
+ N(A4,150);
+ N(B4,150);
+ delay_ms(50);
+
+ ///poder contar com você
+
+ N(B4,100);
+ delay_ms(5);
+ N(B4,100);
+ delay_ms(5);
+ N(A4,100);
+ delay_ms(5);
+ N(B4,100);
+ delay_ms(5);
+ N(B4,100);
+ delay_ms(5);
+ N(B4,100);
+ delay_ms(10);
+ N(C5,250);
+ delay_ms(5);
+ N(B4,150);
+ delay_ms(10);
+ N(G4,190);
+ delay_ms(50);
+
+ ///pois eu me lembro de tudo, irmão
+
+ N(G4,100);
+ delay_ms(5);
+ N(G4,150);
+ delay_ms(5);
+ N(G4,200);
+ N(A4,190);
+ N(B4,190);
+ N(A4,400);
+ delay_ms(100);
+
+ ///eu estava lá também
+
+ N(G4,100);
+ N(A4,150);
+ delay_ms(5);
+ N(G4,100);
+ delay_ms(10);
+ N(G4,150);
+ delay_ms(5);
+ N(E4,150);
+ delay_ms(10);
+ N(G4,200);
+ delay_ms(50);
+
+
+ //o homem quando está em paz
+
+ N(G4,100);
+ delay_ms(10);
+ N(G4,150);
+ N(B4,150);
+ N(G4,50);
+ delay_ms(10);
+ N(G4,150);
+ delay_ms(10);
+ N(E4,150);
+ delay_ms(5);
+ N(G4,200);
+ delay_ms(20);
+ N(G4,100);
+ delay_ms(50);
+
+ // não quer guerra com ninguém
+
+ 
+ N(D5,80);
+ delay_ms(5);
+ N(D5,80);
+ delay_ms(5);
+ N(D5,150);
+ delay_ms(5);
+ N(C5,80);
+ delay_ms(5);
+ N(D5,80);
+ delay_ms(10);
+ N(B4,150);
+ delay_ms(5);
+ N(B4,150);
+ N(G4,200);
+ delay_ms(10);
+
+ /// eu segurei minhas lagrimas
+
+ N(G4,50);
+ delay_ms(5);
+ N(G4,80);
+ delay_ms(5);
+ N(E4,80);
+ delay_ms(5);
+ N(G4,100);
+ delay_ms(5);
+ N(G4,50);
+ delay_ms(5);
+ N(E4,50);
+ delay_ms(5);
+ N(G4,100);
+ delay_ms(5);
+ N(G4,50);
+ delay_ms(5);
+ N(E4,50);
+ delay_ms(5);
+ N(B4,200);
+ delay_ms(50);
+
+ // pois não queria demonstrar emoção
+
+ N(B4,150);
+ delay_ms(10);
+ N(B4,100);
+ delay_ms(5);
+ N(B4,100);
+ delay_ms(5);
+ N(B4,200);
+ delay_ms(10);
+ N(B4,100);
+ delay_ms(5);
+ N(B4,100);
+ delay_ms(5);
+ N(D5,100);
+ delay_ms(5);
+ N(A4,150);
+ delay_ms(10);
+ N(G4,200);
+ delay_ms(20);
+
+
+ // já que estava ali só para observar
+
+ N(G4,50);
+ delay_ms(5);
+ N(G4,80);
+ delay_ms(5);
+ N(E4,80);
+ delay_ms(5);
+ N(G4,100);
+ delay_ms(5);
+ N(G4,50);
+ delay_ms(5);
+ N(E4,50);
+ delay_ms(5);
+ N(G4,100);
+ delay_ms(5);
+ N(G4,50);
+ delay_ms(5);
+ N(E4,50);
+ delay_ms(5);
+ N(G4,50);
+ delay_ms(5);
+ N(E4,100);
+ delay_ms(10);
+ N(G4,150);
+ delay_ms(80);
+
+ ///e aprender um pouco mais sobre a percepção
+
+ N(G4,50);
+ delay_ms(5);
+ N(G4,50);
+ delay_ms(5);
+ N(D5,150);
+ delay_ms(10);
+ N(D5,50);
+ delay_ms(5);
+ N(D5,80);
+ N(C5,80);
+ N(B4,100);
+ delay_ms(10);
+ N(B4,50);
+ N(B4,150);
+ N(A4,80);
+ N(G4,100);
+ delay_ms(50);
+
+ ///eles dizem que é impossível encontrar o amor
+
+ N(G4,150);
+ delay_ms(5);
+ N(E4,80);
+ delay_ms(5);
+ N(G4,50);
+ delay_ms(10);
+ N(G4,100);
+ delay_ms(5);
+ N(G4,100);
+ N(B4,300);
+ delay_ms(100);
+
+ ///sem perder a razão
+ 
+ N(B4,100);
+ N(B4,100);
+ N(A4,100);
+ N(B4,100);
+ N(B4,100);
+ N(A4,80);
+ N(B4,150);
+ N(A4,80);
+ N(B4,100);
+ delay_ms(5);
+ N(B4,80);
+ N(B4,80);
+ N(A4,80);
+ N(B4,80);
+ N(A4,80);
+ N(B4,80);
+ N(A4,80);
+ N(B4,80);
+ N(A4,80);
+ N(B4,80);
+ N(A4,100);
+ N(B4,200);
+ delay_ms(100);
+
+
+ // mas pra quem tem pensamento forte, o impossível é só questão de opinião
+
+
+ N(E4,100);
+ delay_ms(5);
+ N(E4,100);
+ delay_ms(5);
+ N(E4,100);
+ delay_ms(5);
+ N(E4,150);
+ delay_ms(5);
+ N(G4,200);
+ delay_ms(5);
+ N(A4,250);
+ delay_ms(5);
+ N(B4,400);
+ delay_ms(100);
+
+ //e disso os loucos sabem
+
+ N(E4,150);
+ delay_ms(5);
+ N(E4,150);
+ delay_ms(5);
+ N(E4,250);
+ delay_ms(5);
+ N(G4,250);
+ delay_ms(5);
+ N(A4,300);
+ delay_ms(5);
+ N(G4,400);
+
+ //só os loucos sabem
+
+ WHILE(input(BT0)==0);
+ }
+ }
+ 
+ 
+ ///  1 MINUTO E 11 SEGUNDOS DE MÚSICA
